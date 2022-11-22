@@ -1,5 +1,6 @@
-﻿using BulkyBookWeb.Data;
-using BulkyBookWeb.Models;
+﻿
+using BulkyBook.DataAccess;
+using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyBookWeb.Controllers
@@ -46,6 +47,7 @@ namespace BulkyBookWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges(); // here it goes to the db and saves changes
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
             // if it is not valid we return the Create View with the object passed on
@@ -93,12 +95,57 @@ namespace BulkyBookWeb.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
+                // based on the primary key it will update all the properties
+                _db.Categories.Update(obj);
                 _db.SaveChanges(); // here it goes to the db and saves changes
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
             // if it is not valid we return the Create View with the object passed on
             return View(obj);
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            // tries to find based on the PK of the table
+            var categoryFromDb = _db.Categories.Find(id);
+
+            // returns only 1 element, if there is more than 1 element returns the first
+            //var categoryfromDbFirst = _db.Categories.FirstOrDefault(u => u.Id== id);
+
+            // returns only 1 element, if there is more than 1 element throws exception, if no elements are found it will return empty
+            //var categoryfromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
+            // returns only 1 element, if no elements are found it will throw an exception
+            //var categoryfromDbSingle = _db.Categories.Single(u => u.Id == id);
+
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+
+            return View(categoryFromDb);
+        }
+
+        // POST ACTION METHOD
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken] // inject a key into forms and key will be validated to prevent Cross Site Request Forgery
+        public IActionResult DeletePOST(int? id)
+        {
+            var obj = _db.Categories.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
+            return RedirectToAction("Index");
+
         }
     }
 }
