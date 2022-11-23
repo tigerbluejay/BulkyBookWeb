@@ -1,0 +1,29 @@
+﻿@*// the model below is for collecting data on this page, it is not passed from the Create Action method in the Category Controller*@
+@model CoverType
+
+@*// here in the form tag if we don't specify asp-action="Edit" it will submit to the same Action where it came from, in this case Edit'*@
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Edit Cover Type</h2>
+			<hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			@*// retrieves Name from the Category model*@
+			<label asp-for="Name"></label>
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" sytle="width:150px">Update</button>
+		@*// returns to Category controller Index Action where the categories are retrieved*@
+		<a asp-controller="CoverType" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}

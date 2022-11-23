@@ -1,23 +1,26 @@
 ﻿
 using BulkyBook.DataAccess;
+using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyBookWeb.Controllers
+namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        // private readonly ApplicationDbContext _db;
+        //private readonly ICategoryRepository _db;
+        private readonly IUnitOfWork _unitOfWork;
 
         // we pass as argument whatever we registered in the builder in Program.cs
-        public CategoryController(ApplicationDbContext db)
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
             // retrieve Categories from db
-            IEnumerable<Category> objCategoryList = _db.Categories;
+            IEnumerable<Category> objCategoryList = _unitOfWork.Category.GetAll();
             return View(objCategoryList);
         }
 
@@ -45,8 +48,8 @@ namespace BulkyBookWeb.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
-                _db.SaveChanges(); // here it goes to the db and saves changes
+                _unitOfWork.Category.Add(obj);
+                _unitOfWork.Save(); // here it goes to the db and saves changes
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
@@ -56,27 +59,27 @@ namespace BulkyBookWeb.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if(id == null || id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
             // tries to find based on the PK of the table
-            var categoryFromDb = _db.Categories.Find(id);
-            
+            // var categoryFromDb = _db.Categories.Find(id);
+
             // returns only 1 element, if there is more than 1 element returns the first
-            //var categoryfromDbFirst = _db.Categories.FirstOrDefault(u => u.Id== id);
+            var categoryfromDbFirst = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
 
             // returns only 1 element, if there is more than 1 element throws exception, if no elements are found it will return empty
             //var categoryfromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
             // returns only 1 element, if no elements are found it will throw an exception
             //var categoryfromDbSingle = _db.Categories.Single(u => u.Id == id);
 
-            if (categoryFromDb == null)
+            if (categoryfromDbFirst == null)
             {
                 return NotFound();
             }
 
-            return View(categoryFromDb);
+            return View(categoryfromDbFirst);
         }
 
         // POST ACTION METHOD
@@ -96,8 +99,8 @@ namespace BulkyBookWeb.Controllers
             if (ModelState.IsValid)
             {
                 // based on the primary key it will update all the properties
-                _db.Categories.Update(obj);
-                _db.SaveChanges(); // here it goes to the db and saves changes
+                _unitOfWork.Category.Update(obj);
+                _unitOfWork.Save(); // here it goes to the db and saves changes
                 TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
@@ -112,22 +115,22 @@ namespace BulkyBookWeb.Controllers
                 return NotFound();
             }
             // tries to find based on the PK of the table
-            var categoryFromDb = _db.Categories.Find(id);
+            // var categoryFromDb = _db.Categories.Find(id);
 
             // returns only 1 element, if there is more than 1 element returns the first
-            //var categoryfromDbFirst = _db.Categories.FirstOrDefault(u => u.Id== id);
+            var categoryfromDbFirst = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
 
             // returns only 1 element, if there is more than 1 element throws exception, if no elements are found it will return empty
             //var categoryfromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
             // returns only 1 element, if no elements are found it will throw an exception
             //var categoryfromDbSingle = _db.Categories.Single(u => u.Id == id);
 
-            if (categoryFromDb == null)
+            if (categoryfromDbFirst == null)
             {
                 return NotFound();
             }
 
-            return View(categoryFromDb);
+            return View(categoryfromDbFirst);
         }
 
         // POST ACTION METHOD
@@ -135,14 +138,14 @@ namespace BulkyBookWeb.Controllers
         [ValidateAntiForgeryToken] // inject a key into forms and key will be validated to prevent Cross Site Request Forgery
         public IActionResult DeletePOST(int? id)
         {
-            var obj = _db.Categories.Find(id);
+            var obj = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            _db.Categories.Remove(obj);
-            _db.SaveChanges();
+            _unitOfWork.Category.Remove(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
 
