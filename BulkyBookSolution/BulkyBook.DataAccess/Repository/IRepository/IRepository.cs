@@ -15,8 +15,8 @@ namespace BulkyBook.DataAccess.Repository.IRepository
         // T can be any class
         // we want an expression, inside the expression there is a function, that the first
         // parameter is the generic class T, and the output is boolean and we will call that filter
-        T GetFirstOrDefault(Expression<Func<T,bool>> filter);
-        IEnumerable<T> GetAll();
+        T GetFirstOrDefault(Expression<Func<T,bool>> filter, string? includeProperties = null);
+        IEnumerable<T> GetAll(string? includeProperties = null);
         void Add(T entity);
         void Remove(T entity);
         // we remove more than one object, so a list of objects
