@@ -565,3 +565,8 @@ C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\
 C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.dll
 C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Utility.pdb
+C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\MailKit.dll
+C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\MimeKit.dll
+C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\SendGrid.dll
+C:\Users\josem\source\BulkyBook\BulkyBookSolution\BulkyBookWeb\bin\Debug\net6.0\StarkbankEcdsa.dll
