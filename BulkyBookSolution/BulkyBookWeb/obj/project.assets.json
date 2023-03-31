@@ -11918,11 +11918,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBookWeb\\BulkyBookWeb.csproj",
+      "projectUniqueName": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBookWeb\\BulkyBookWeb.csproj",
       "projectName": "BulkyBookWeb",
-      "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBookWeb\\BulkyBookWeb.csproj",
+      "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBookWeb\\BulkyBookWeb.csproj",
       "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBookWeb\\obj\\",
+      "outputPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBookWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11939,11 +11939,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
+            "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
             },
-            "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
-              "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
+            "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+              "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
             }
           }
         }

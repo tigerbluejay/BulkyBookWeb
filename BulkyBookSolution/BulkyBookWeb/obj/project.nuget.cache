@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "exwpWx2m8CnwzBxGS9MHpkDka+hk8iX+cJTNLf62B2k49351MMvCzDU5AcJ8uMu7JYVEklPx+O1RgxnAcmL99w==",
+  "dgSpecHash": "ItDI+xhuEwVp0YYCaev/Ufgs86ajLwVvqb6b9tncPf9Euh2235sPdorg1fIAeT9HEpuRRjZ0sboB9T/L0HrHwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBookWeb\\BulkyBookWeb.csproj",
+  "projectFilePath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBookWeb\\BulkyBookWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josem\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\mailkit\\3.5.0\\mailkit.3.5.0.nupkg.sha512",

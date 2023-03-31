@@ -1183,11 +1183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
       "projectName": "BulkyBook.Utility",
-      "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+      "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
       "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Utility\\obj\\",
+      "outputPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",

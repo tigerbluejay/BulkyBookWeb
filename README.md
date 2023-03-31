@@ -1,5 +1,3 @@
-"# BulkyBookWeb" 
-
 # DotNetMastery's BulkyBookWeb
 # A Complete MVC E-Commerce Solution
 

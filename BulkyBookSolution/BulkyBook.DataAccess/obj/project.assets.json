@@ -8108,11 +8108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
       "projectName": "BulkyBook.DataAccess",
-      "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+      "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
       "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8129,8 +8129,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-              "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookSolution\\BulkyBook.Models\\BulkyBook.Models.csproj"
+            "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+              "projectPath": "C:\\Users\\josem\\source\\BulkyBook\\BulkyBookWeb\\BulkyBookSolution\\BulkyBook.Models\\BulkyBook.Models.csproj"
             }
           }
         }
